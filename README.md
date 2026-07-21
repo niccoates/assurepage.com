@@ -1,4 +1,4 @@
-# AssurePage
+# Assurepage
 
 A production-ready, framework-free static landing page built with semantic HTML and modern CSS.
 
