@@ -2,6 +2,12 @@ const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('#mobile-menu');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+document.querySelectorAll('a[href^="http"]').forEach((link) => {
+  if (link.origin === window.location.origin) return;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+});
+
 function closeMenu() {
   if (!menuButton || !mobileMenu) return;
   menuButton.setAttribute('aria-expanded', 'false');
